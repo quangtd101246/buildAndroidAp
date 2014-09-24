@@ -1,0 +1,138 @@
+*{
+    font-family: "Roboto";
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+}
+.active{
+    color: white;
+    font-size: 20px;
+    background-color: black;
+    border-bottom: 3px solid;
+}
+.wrapper
+{
+    width:100%;
+    position: relative;
+}
+.slogan{
+    width: 990px;
+    margin: auto;
+}
+.slogan img{
+    width: 100%;
+}
+.menu{
+    width: 990px;
+    text-align: center;
+    background-color: #80806F;
+    margin: -4px auto;
+}
+.menu a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+#scrollerota {
+    width: 990px;
+    height: 340px;
+    margin: 4px auto;
+    overflow: hidden;
+    position: relative;
+}
+#scrollerota img{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.info-box{
+    width: 990px;
+    margin: auto;
+    padding: 20px;
+    background-color: #D8D8D8;
+}
+.home{
+    width: 100%;
+}
+.home h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+.home h2{
+    text-align: center;
+    text-transform: uppercase;
+}
+.home p{
+    direction: rtl;
+    padding: 5px;
+}
+.home>p>span{
+    font-weight: 600;
+    margin-right: 5px;
+}
+.introduce{
+    width: 100%;
+    display: none;
+}
+.introduce h1{
+    text-align: center;
+}
+.box-info{
+    width: 100%;
+    margin: 50px 0 0 200px;
+}
+.box-info p{
+    float: left;
+    margin-right: 100px;
+}
+.box-info img{
+    width: 300px;
+    height: 300px;
+    float: left;
+}
+
+.contact{
+    width: 100%;
+    padding: 50px;
+    display: none;
+}
+.contact p{
+    padding: 5px;
+    font-weight: 600;
+}
+.footer{
+    width: 990px;
+    margin: 10px auto;
+}
+/*Group*/
+.group:before,.group:after
+{
+  content:"";
+  display:table;
+}
+
+.group:after
+{
+  content:"";
+  display:table;
+  clear:both;
+}
+
+.group
+{
+  zoom:1;
+}
+
+.clearer{
+    clear: left;
+}
+
+.active{
+    z-index: 99;
+}

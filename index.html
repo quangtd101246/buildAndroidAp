@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Trang Chủ</title>
+            <meta charset="UTF-8">
+            <link rel="stylesheet" href="css/css.css" type="text/css">
+            <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+            <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700,900&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+            <script src="phonegap.js"></script>
+        </head>
+        <body>
+            <div class="wrapper">
+                <div class="slogan">
+                    <img src="img/slogan.jpg"/>
+                </div>
+                <div class="menu">
+                    <a href='javascript:showPage(0)'>Trang Chủ</a>
+                    <a href='javascript:showPage(1)'>Giới thiệu</a>
+                    <a href='javascript:showPage(2)'>Liên hệ</a>
+                </div>
+                <div id="scrollerota">
+                        <img src="img/bn1.jpg"/>
+                        <img src="img/bn3.jpg"/>
+                </div>
+                <div class="info-box">
+                    <div class="page home">
+                        <h1>đồ án tốt nghiệp</h1>
+                        <h2>XÂY DỰNG HỆ THỐNG BẢO MẬT CHO CÔNG TY VỚI CISCO ASA</h2>
+                        
+                        <p>
+                            <span>Giảng viên hướng dẫn:</span>Nguyễn Phi Thái      
+                        </p>
+
+                        <p>
+                            <span>Tên Lớp:</span>21CCHT03     
+                        </p>
+                        
+                        <p>
+                            <span>:Thành viên nhóm</span>
+                            <ul style="direction: rtl;list-style: none">
+                                <li>Cao Hoàng Đệ+</li>
+                                <li>Võ Văn Trong+</li>
+                                <li>Nguyễn Hoàng An+</li>
+                                <li>Nguyễn Hồng Sơn+</li>
+                            </ul>
+                        </p>
+                    </div>
+                    
+                    <div class="page introduce">
+                        <h1>Thông tin thành viên</h1>
+                    <div class="box-info group">
+                        <p>Name</p>
+                        <img src="img/footer.PNG">
+                    </div>
+                    <div class="box-info group">
+                        <p>Name</p>
+                        <img src="img/footer.PNG">
+                    </div>
+                    <div class="box-info group">
+                        <p>Name</p>
+                        <img src="img/footer.PNG">
+                    </div>
+                    <div class="box-info group">
+                        <p>Name</p>
+                        <img src="img/footer.PNG">
+                    </div>
+                    <div class="box-info group">
+                        <p>Name</p>
+                        <img src="img/footer.PNG">
+                    </div>
+                    </div>
+                    <div class="page contact">
+                        <p>SĐT:</p>
+                        <p>Email:</p>
+                        <p>Address:</p>
+                    </div>
+                </div>
+                
+                <div class="footer">
+                    <img src="img/footer.PNG"/>
+                </div>
+            </div>
+        </body>
+        <script>
+            $(document).ready(function(){
+                
+                
+                $(".menu a").mouseover(function(){
+                    $(this).addClass("active");
+                });
+                
+                $(".menu a").mouseout(function(){
+                    $(this).removeClass("active");
+                });
+                
+                slideshow()
+                function slideshow() {
+                    $('#scrollerota img:gt(0)').hide();
+                    setInterval(function(){
+                      $('#scrollerota :first-child').fadeOut()
+                         .next('img').fadeIn()
+                         .end().appendTo('#scrollerota')},
+                      3000);
+                }
+                
+                
+            })
+            function showPage(id) {
+                    $(".page").hide();
+                    $($(".page")[id]).fadeIn(300);
+                }
+        </script>
+    </html>
